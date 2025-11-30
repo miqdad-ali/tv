@@ -8,10 +8,11 @@ mkdir -p config/jellyfin \
          config/jackett \
          config/qbittorrent \
          config/cloudflare \
-         media \
+         media/movies \
+         media/tv \
          downloads
 
 chmod -R 777 config media downloads
 
-echo "Directories created and permissions applied. \n"
+echo "dirs created \n"
 

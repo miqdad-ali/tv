@@ -64,26 +64,29 @@ docker compose down
 
 ## Initial Setup
 
-Run the setup script to create all required folders with open permissions:
+Run the setup script to generate all required folders, including separate media directories for movies and TV:
 
 ```bash
-chmod +x setup.sh && ./setup.sh
+./setup.sh
 ```
 
-This will generate:
+This will create:
 
 ```
-config/jellyfin
-config/radarr
-config/sonarr
-config/jackett
-config/qbittorrent
-config/cloudflare
+config/
+  ├── jellyfin
+  ├── radarr
+  ├── sonarr
+  ├── jackett
+  ├── qbittorrent
+  └── cloudflare     # unused if running without cloudflare
 media/
+  ├── movies/
+  └── tv/
 downloads/
 ```
 
-Once done, start the stack:
+After setup:
 
 ```bash
 docker compose up -d
